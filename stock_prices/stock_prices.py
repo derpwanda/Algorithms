@@ -2,9 +2,23 @@
 
 import argparse
 
-def find_max_profit(prices):
-  pass
+# buy low, sell high
+# the biggist positive difference left to right
+# you have to buy before you sell
+# the array is a list of prices throughout the day
+# buy at 270, sell at 3800
 
+
+def find_max_profit(prices):
+	# find the lowest price that is not the final number in the array
+	# compare that num to every subsequent number in the array
+	# log the highest, if another high comes along replace it
+
+    for index in range(0, len(prices) - 1):
+		print(index)
+
+
+print(find_max_profit([1050, 270, 1540, 3800, 2])) # should return 3530
 
 if __name__ == '__main__':
   # This is just some code to accept inputs from the command line
