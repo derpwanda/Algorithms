@@ -14,19 +14,18 @@ def find_max_profit(prices):
 	# compare that num to every subsequent number in the array
 	# log the highest, if another high comes along replace it
 
-	lowest_num=[]
-	for index in range(0, len(prices) - 1):
-		print(f"forloop", prices[index]) # prints value at index
-		print(index) # prints actual index
+def find_max_profit(prices):
 
-		current_price = prices[index]
-		next_price = prices[index + 1]
+    low = prices[0]
+    profit = prices[1] - low
+    
+    for current in prices[1:]:
+        profit = max(current - low, profit)
+        low = min(current, low)
+            
+    return profit
 
-		if current_price < next_price:
-			lowest_num = current_price
-			print(f"if statement: ", lowest_num)
-	
-	return lowest_num
+print(find_max_profit([1050, 270, 1540, 3800, 2]))
 # currently returns 1540 as lowest_num
 # print(prices[index])
 
