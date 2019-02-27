@@ -4,7 +4,7 @@ import math
 
 def recipe_batches(recipe, ingredients): 
 	# create two lists: ingredients and recipe
-	ingredients = [value for value in ingredients.values()]
+	ingredients = [value for value in ingredients.values()] #list comprehension
 	recipe = [value for value in recipe.values()]
 
 	print(ingredients)
