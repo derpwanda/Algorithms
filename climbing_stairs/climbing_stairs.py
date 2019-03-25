@@ -5,13 +5,6 @@ import sys
 
 def climbing_stairs(n, cache=None):
 
-    # if stairs = 0, then return 1
-    # if the num of stairs is < 0, return 0
-
-  if n <= 1:
-    return 1
-
-  climbing_stairs(n**n-n)
 
 print(climbing_stairs(3))
 
