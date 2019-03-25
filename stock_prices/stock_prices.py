@@ -8,7 +8,7 @@ import argparse
 # the array is a list of prices throughout the day
 # buy at 270, sell at 3800
 
-
+# python tutor https://goo.gl/tKTiUx
 def find_max_profit(prices):
 	# find the lowest price that is not the final number in the array
 	# compare that num to every subsequent number in the array
