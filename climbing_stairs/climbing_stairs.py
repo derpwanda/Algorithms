@@ -7,14 +7,47 @@ def climbing_stairs(n, cache=None):
 
     # if stairs = 0, then return 1
     # if the num of stairs is < 0, return 0
-    if n < 0:
-        return 0
 
-    if n % 3 == 0:
-        return 0
+  if n <= 1:
+    return 1
 
-    else:
-        climbing_stairs(n)
+  climbing_stairs(n**n-n)
+
+print(climbing_stairs(3))
+
+
+# 3
+# 1 + 1 + 1
+# 2 + 1
+# 1 + 2
+# 3
+
+
+# 4
+# 1 + 1 + 1 + 1
+# 3 + 1
+# 1 + 3
+# 2 + 1 + 1
+# 2 + 2
+# 1 + 2 + 1
+# 1 + 1 + 2
+
+
+# 5
+# 2 + 2 + 1
+# 1 + 2 + 2
+# 1 + 1 + 1 + 1 + 1
+# 2 + 1 + 2
+# 1 + 2 + 1 + 1
+# 2 + 1 + 1 + 1
+# 1 + 1 + 2 + 1
+# 1 + 1 + 1 + 2
+# 3 + 2
+# 2 + 3
+# 3 + 1 + 1
+# 1 + 3 + 1
+# 1 + 1 + 3
+
 
 
 if __name__ == "__main__":
