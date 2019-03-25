@@ -2,6 +2,21 @@
 
 import sys
 
+# Polya
+# Understand the problem: 
+#   There is a staircase with N number of stairs.
+#   I can only move 1, 2 or 3 stairs at a time, no matter how many
+#     stairs N is (unless is less than possible num of stair I can move)
+  
+#   I need to return the number of DIFFERENT WAYS I can ascend the stairs.
+#   For example:
+#     # num of stairs: 3
+#     # 1 + 1 + 1 - take 1 stair at a time for a total of 3
+#     # 2 + 1 - take 2 stair, then 1 stair for a total of 3
+#     # 1 + 2 - take 1 stair, then 2 stair for a total of 3
+#     # 3 - take 3 stairs once for a total of 3
+#   means that there are FOUR ways to ascend the stairs
+
 
 def climbing_stairs(n, cache=None):
 
