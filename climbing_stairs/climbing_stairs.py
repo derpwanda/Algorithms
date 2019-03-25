@@ -2,26 +2,42 @@
 
 import sys
 
-# Polya
-# Understand the problem: 
-#   There is a staircase with N number of stairs.
-#   I can only move 1, 2 or 3 stairs at a time, no matter how many
-#     stairs N is (unless is less than possible num of stair I can move)
+'''
+Polya
+Understand the problem: 
+  There is a staircase with N number of stairs.
+  I can only move 1, 2 or 3 stairs at a time, no matter how many
+    stairs N is (unless is less than possible num of stair I can move)
   
-#   I need to return the number of DIFFERENT WAYS I can ascend the stairs.
-#   For example:
-#     # num of stairs: 3
-#     # 1 + 1 + 1 - take 1 stair at a time for a total of 3
-#     # 2 + 1 - take 2 stair, then 1 stair for a total of 3
-#     # 1 + 2 - take 1 stair, then 2 stair for a total of 3
-#     # 3 - take 3 stairs once for a total of 3
-#   means that there are FOUR ways to ascend the stairs
+  I need to return the number of DIFFERENT WAYS I can ascend the stairs.
+  For example:
+    # num of stairs: 3
+    # 1 + 1 + 1 - take 1 stair at a time for a total of 3
+    # 2 + 1 - take 2 stair, then 1 stair for a total of 3
+    # 1 + 2 - take 1 stair, then 2 stair for a total of 3
+    # 3 - take 3 stairs once for a total of 3
+    
+    means that there are FOUR ways to ascend the stairs
 
+    # num of stairs: 4
+    # 3 + 1
+    # 2 + 1 + 1
+    # 2 + 2
+    # 1 + 3
+    # 1 + 2 + 1
+    # 1 + 1 + 2
+    # 1 + 1 + 1 + 1
+
+    there are 7 ways to ascend the stairs
+
+    Questions:
+    - What is the purpose of `cache`?
+    - if recursive, what is the base case?
+        - if stairs = 0, return 1
+        - if stairs < 0, return 0
+'''
 
 def climbing_stairs(n, cache=None):
-
-    # if stairs = 0, then return 1
-    # if the num of stairs is < 0, return 0
 
   if n <= 1:
     return 1
