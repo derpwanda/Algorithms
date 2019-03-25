@@ -24,8 +24,6 @@ def find_max_profit(prices):
     return profit
 
 print(find_max_profit([1050, 270, 1540, 3800, 2]))
-# currently returns 1540 as lowest_num
-# print(prices[index])
 
 
 print(find_max_profit([1050, 270, 1540, 3800, 2])) # should return 3530
