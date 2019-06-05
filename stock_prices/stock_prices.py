@@ -14,12 +14,12 @@ def find_max_profit(prices):
 	# compare that num to every subsequent number in the array
 	# log the highest, if another high comes along replace it
 
-    low = prices[0]
-    profit = prices[1] - low
+    low_price = prices[0]
+    profit = prices[1] - low_price
     
     for current in prices[1:]:
-        profit = max(current - low, profit)
-        low = min(current, low)
+        profit = max(current - low_price, profit)
+        low_price = min(current, low_price)
             
     return profit
 
