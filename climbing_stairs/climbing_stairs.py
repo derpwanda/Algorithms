@@ -38,11 +38,14 @@ Understand the problem:
 '''
 
 def climbing_stairs(n, cache=None):
+  if n < 2:
+    return n
+  elif cache and cache[n] > 0:
+    return cache[n]
+  else:
+    cache[n] = climbing_stairs(n - 1, cache) + climbing_stairs(n - 2, cache)
 
-  if n <= 1:
-    return 1
-
-  climbing_stairs(n**n-n)
+    return cache[n]
 
 print(climbing_stairs(3))
 
